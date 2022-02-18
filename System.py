@@ -60,7 +60,7 @@ class System:
             raise Exception("This operation not supporting")
 
     @staticmethod
-    def run_command(command, returnList=None):
+    def runCommand(command, returnList=None):
         subprocess = Popen(command, shell=True, stdout=PIPE)
         subprocess_return = subprocess.stdout.read().decode("utf-8")
         if returnList:
